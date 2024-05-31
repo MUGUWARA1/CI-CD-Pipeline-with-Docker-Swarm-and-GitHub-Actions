@@ -9,4 +9,4 @@ services:
       replicas: 3
       placement:
         constraints:
-          - node.labels.node-role == worker1
+          - node.labels.node-role == worker
