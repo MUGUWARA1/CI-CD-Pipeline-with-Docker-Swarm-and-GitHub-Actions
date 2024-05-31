@@ -20,4 +20,4 @@ jobs:
           docker build . -t muguwara1/fever_tokens_app:latest
       - name:
         run: |
-          docker push uguwara1/fever_tokens_app:latest
+          docker push muguwara1/fever_tokens_app:latest
