@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  my_service:
+    image: muguwara1/fever_tokens_app:latest:latest
+    ports:
+      - "80:80"
+    deploy:
+      replicas: 3
+      placement:
+        constraints:
+          - node.labels.node-role == worker1
