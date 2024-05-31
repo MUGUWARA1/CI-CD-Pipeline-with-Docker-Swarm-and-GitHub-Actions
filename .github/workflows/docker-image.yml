@@ -17,7 +17,7 @@ jobs:
           docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{secrets.DOCKER_TOKEN}} 
       - name: Build 
         run: |
-          docker build . -t MUGUWARA1/feverTokensapp:latest
+          docker build . -t muguwara1/fever_tokens_app:latest
       - name:
         run: |
           docker push MUGUWARA1/feverTokensapp:latest
