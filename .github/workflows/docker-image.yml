@@ -26,7 +26,7 @@ jobs:
 
       - name: Deploy on docker swarm
         run : |
-          ssh user@$MANAGER_IP "docker stack deploy --compose-file docker-compose.yml muguwara1/fever_tokens_app:latest"
+          ssh user@${{vars.SWARM_MANAGER_IP}} "docker stack deploy --compose-file docker-compose.yml muguwara1/fever_tokens_app:latest"
 
 
       
