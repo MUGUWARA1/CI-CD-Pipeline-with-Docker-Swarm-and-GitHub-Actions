@@ -22,7 +22,7 @@ jobs:
         run: |
           docker push muguwara1/fever_tokens_app:latest
       - name: Generate ssh key
-        run : ssh-keygen -t ed25519-P ""-f ~/.ssh/id_ed25519
+        run : ssh-keygen -t ed25519 -P "" -f ~/.ssh/id_ed25519
 
       - name: Deploy on docker swarm
         env:
