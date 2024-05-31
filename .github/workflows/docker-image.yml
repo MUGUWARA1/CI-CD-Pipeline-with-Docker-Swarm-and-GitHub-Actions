@@ -28,7 +28,7 @@ jobs:
         env:
           DOCKER_HOST: "ssh://swarm-manager-user@${{ secrets.SWARM_MANAGER_IP }}"
         run : |
-          docker stack deploy -c docker-compose.yml
+          docker stack deploy -c docker-compose.yml muguwara1/fever_tokens_app:latest 
 
 
       
