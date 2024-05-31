@@ -26,6 +26,6 @@ jobs:
 
       - name: Deploy on docker swarm
         run : |
-          ssh ip172-18-0-126-cpd19bq91nsg00areuu0@direct.labs.play-with-docker.com "docker stack deploy -c docker-compose.yml muguwara1/fever_tokens_app"
+          ssh -o StrictHostKeyChecking=no docker@${{ vars.SWARM_MANAGER_IP}} "docker stack deploy -c docker-compose.yml muguwara1/fever_tokens_app"
 
       
