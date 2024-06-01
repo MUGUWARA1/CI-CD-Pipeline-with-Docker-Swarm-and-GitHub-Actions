@@ -1,0 +1,1 @@
+"docker stack deploy -c FeverTokenTask/docker-image.yml Stackapp"

@@ -26,6 +26,5 @@ jobs:
 
       - name: Deploy on docker swarm
         run : |
-          ssh ip172-18-0-19-cpdjse0l2o90008vg43g@direct.labs.play-with-docker.com "docker stack deploy -c FeverTokenTask/.github\workflows\docker-image.yml Stackapp"
-
+          ssh ip172-18-0-36-cpdlv9qim2rg00c0f52g@direct.labs.play-with-docker.com
       
