@@ -23,9 +23,9 @@ jobs:
           docker push muguwara1/fever_tokens_app:latest
       - name: Generate ssh key
         run : | 
-          ssh-keygen -t rsa -P "" -f ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
+          ssh-keygen -t ed25519 -P "" -f ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
       - name: Deploy on docker swarm
         run : |
-          /usr/bin/ssh -tt -o StrictHostKeyChecking=no ip172-18-0-80-cpdpcpq91nsg00ame3a0@direct.labs.play-with-docker.com /
+          ssh -tt -o StrictHostKeyChecking=no ip172-18-0-80-cpdpcpq91nsg00ame3a0@direct.labs.play-with-docker.com /
           "docker stack deploy -c docker-compose.yml fevertokens-webapp"
