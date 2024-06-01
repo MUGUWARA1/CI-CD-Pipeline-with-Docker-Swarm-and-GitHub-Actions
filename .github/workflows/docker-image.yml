@@ -27,5 +27,5 @@ jobs:
           chmod 600 ~/.ssh/id_ed25519
       - name: Deploy on docker swarm
         run : |
-          /usr/bin/ssh -tt -o StrictHostKeyChecking=no ip172-18-0-30-cpdol9i91nsg009nvep0@direct.labs.play-with-docker.com /
+          /usr/bin/ssh -tt -o StrictHostKeyChecking=no ip172-18-0-118-cpdpbkgl2o900092708g@direct.labs.play-with-docker.com /
           "docker stack deploy -c docker-compose.yml fevertokens-webapp"
