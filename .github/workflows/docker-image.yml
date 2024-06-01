@@ -29,7 +29,7 @@ jobs:
 
       - name: Deploy on docker swarm
         run : |
-          ssh ip172-18-0-36-cpdlv9qim2rg00c0f52g@direct.labs.play-with-docker.com
+          ssh -o StrictHostKeyChecking=no ip172-18-0-36-cpdlv9qim2rg00c0f52g@direct.labs.play-with-docker.com
 
-          
+
       
