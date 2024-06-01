@@ -19,12 +19,11 @@ jobs:
         run: |
           docker build . -t muguwara1/fever_tokens_app:latest
       - name: pushing to docker hub
-        run: |
+        run: |  
           docker push muguwara1/fever_tokens_app:latest
       - name: Generate ssh key
         run : | 
-          ssh-keygen -t rsa
-
+          ssh-keygen-t ed25519-P ""-f ~/.ssh/id_ed25519
       - name: Deploy on docker swarm
         run : |
           ssh -o StrictHostKeyChecking=no ip172-18-0-30-cpdol9i91nsg009nvep0@direct.labs.play-with-docker.com
