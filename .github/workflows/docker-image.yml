@@ -28,5 +28,19 @@ jobs:
       - name: Deploy on docker swarm
         run : |
           /usr/bin/ssh -tt -o StrictHostKeyChecking=no ip172-18-0-30-cpdol9i91nsg009nvep0@direct.labs.play-with-docker.com
+          touch docker-compose.yml
+          echo "version: '3.8'
 
+          services:
+            my_service:
+              image: muguwara1/fever_tokens_app:latest
+              ports:
+                - "80:80"
+              deploy:
+                replicas: 3
+                placement:
+                  constraints:
+                    - node.labels.node-role == worker
+          " > docker-compose.yml
+          docker-compose up
       
