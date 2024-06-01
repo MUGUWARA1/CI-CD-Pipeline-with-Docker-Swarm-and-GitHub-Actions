@@ -27,6 +27,6 @@ jobs:
           chmod 600 ~/.ssh/id_ed25519
       - name: Deploy on docker swarm
         run : |
-          ssh -tt -o StrictHostKeyChecking=no ip172-18-0-30-cpdol9i91nsg009nvep0@direct.labs.play-with-docker.com
+          ssh -tt -v -o StrictHostKeyChecking=no ip172-18-0-30-cpdol9i91nsg009nvep0@direct.labs.play-with-docker.com
 
       
