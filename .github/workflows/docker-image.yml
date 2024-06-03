@@ -29,8 +29,8 @@ jobs:
       - name: Deploy to swarm
         uses: sagebind/docker-swarm-deploy-action@v2
         with:
-          remote_host: ip172-18-0-37-cpf27iq91nsg00fn3f6g@direct.labs.play-with-docker.com
-          args: stack deploy --compose-file docker-compose.yml coolapp
+          remote_host: "ip172-18-0-90-cpf2hb2im2rg00b1stjg@direct.labs.play-with-docker.com"
+          args: "stack deploy --compose-file docker-compose.yml coolapp"
           
           
         
