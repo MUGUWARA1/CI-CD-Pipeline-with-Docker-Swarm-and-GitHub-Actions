@@ -26,9 +26,20 @@ jobs:
           ssh-keygen -t ed25519 -P "" -f ~/.ssh/id_ed25519
           cat ~/.ssh/id_ed25519.pub
           chmod 600 ~/.ssh/id_ed25519
-      - name: Deploy on docker swarm
-        run : |
-          ssh -v -o StrictHostKeyChecking=no ip172-18-0-37-cpf18tol2o90009lnisg@direct.labs.play-with-docker.com 
+      - name: Deploy to swarm
+        uses: sagebind/docker-swarm-deploy-action@v2
+        with:
+          remote_host: ssh ip172-18-0-74-cpf27iq91nsg00fn3f6g@direct.labs.play-with-docker.com
+          args: stack deploy --compose-file docker-compose.yml coolapp
+          
+          
+        
+        
+        
+        
+        #name: Deploy on docker swarm
+        #run : |
+         # ssh -v -o StrictHostKeyChecking=no ip172-18-0-37-cpf18tol2o90009lnisg@direct.labs.play-with-docker.com 
         #"docker stack deploy -c docker-compose.yml ft-webapp"
       # uses: kitconcept/docker-stack-deploy@v1.2.0
       
