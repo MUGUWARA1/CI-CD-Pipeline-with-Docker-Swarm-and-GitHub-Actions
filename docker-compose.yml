@@ -6,7 +6,6 @@ services:
     ports:
       - "80:80"
     deploy:
-      replicas: 3
       placement:
         constraints:
-          - node.labels.node-role == worker
+          - node.role == worker
