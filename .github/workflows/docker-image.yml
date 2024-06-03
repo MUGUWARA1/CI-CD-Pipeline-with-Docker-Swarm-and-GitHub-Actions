@@ -28,7 +28,7 @@ jobs:
           chmod 600 ~/.ssh/id_ed25519
       - name: Deploy on docker swarm
         run : |
-          ssh -o -v StrictHostKeyChecking=no ip172-18-0-37-cpf18tol2o90009lnisg@direct.labs.play-with-docker.com 
+          ssh -v -o StrictHostKeyChecking=no ip172-18-0-37-cpf18tol2o90009lnisg@direct.labs.play-with-docker.com 
         #"docker stack deploy -c docker-compose.yml ft-webapp"
       # uses: kitconcept/docker-stack-deploy@v1.2.0
       
