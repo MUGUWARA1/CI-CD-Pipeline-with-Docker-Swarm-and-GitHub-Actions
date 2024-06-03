@@ -7,7 +7,7 @@ on:
 jobs:
   Build_push_to_Docker_Hub:
     name: Build and Push Docker image to Docker Hub
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
       - name: Check out the repo
         uses: actions/checkout@v4
@@ -29,3 +29,6 @@ jobs:
         run : |
           ssh -o StrictHostKeyChecking=no ip172-18-0-37-cpf18tol2o90009lnisg@direct.labs.play-with-docker.com 
         #"docker stack deploy -c docker-compose.yml ft-webapp"
+      # uses: kitconcept/docker-stack-deploy@v1.2.0
+      
+      
